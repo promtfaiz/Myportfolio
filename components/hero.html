@@ -1,0 +1,47 @@
+<!-- Hero Section Component -->
+<section id="home" class="page-section active pt-24">
+    <div class="min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute top-10 right-10 w-64 h-64 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute bottom-10 left-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Left Content -->
+            <div class="fade-in">
+                <div class="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-full mb-6 font-semibold text-sm">
+                    <i class="fas fa-rocket mr-2"></i>Welcome to my portfolio
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+                    Mohd. <span class="gradient-text">Faiz Shaikh</span>
+                </h1>
+                <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                    Product Professional | POS Systems Specialist | Operations Expert
+                </p>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                    2+ years managing 500+  clients with expertise in product operations, testing, and client support.
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <button class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:scale-105 transition transform hover-lift" onclick="Utils.navigateTo('contact')">
+                        Get In Touch
+                    </button>
+                    <button class="border-2 border-cyan-500 text-cyan-600 px-8 py-4 rounded-lg font-bold hover:bg-cyan-50 transition" onclick="Utils.navigateTo('projects')">
+                        View Projects
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="hidden md:flex justify-center">
+                <div class="relative w-80 h-80">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-3xl shadow-2xl flex items-center justify-center text-white animate-pulse">
+                        <div class="text-center">
+                            <i class="fas fa-user-tie text-6xl mb-4"></i>
+                            <p class="text-2xl font-bold">Product Professional</p>
+                            <p class="text-lg mt-2">POS Systems Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
