@@ -147,17 +147,32 @@
             display: block;
         }
         .section-title {
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: 800;
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
         .section-subtitle {
-            font-size: 1.125rem;
+            font-size: 0.95rem;
             color: #a0a0a0;
             max-width: 600px;
             margin: 0 auto 2rem;
             line-height: 1.8;
+        }
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 1.125rem;
+            }
         }
         .job-badge {
             display: inline-flex;
@@ -213,6 +228,17 @@
         @keyframes float-blob {
             0% { transform: translate(0, 0) scale(1); }
             100% { transform: translate(50px, 50px) scale(1.1); }
+        }
+        @media (max-width: 768px) {
+            .blob {
+                animation: float-blob 15s infinite alternate;
+            }
+        }
+        @media (max-width: 480px) {
+            .blob {
+                opacity: 0.15;
+                animation: none;
+            }
         }
         /* Enhanced Card Hover */
         .card-modern:hover {
@@ -296,6 +322,12 @@
             transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
             background-color: rgba(0, 212, 255, 0.3);
         }
+        @media (hover: none) and (pointer: coarse) {
+            .cursor-dot,
+            .cursor-outline {
+                display: none !important;
+            }
+        }
         /* Modal Styles */
         .modal-backdrop {
             position: fixed;
@@ -346,6 +378,286 @@
         @keyframes skeleton-loading {
             0% { background-position: 200% 0; }
             100% { background-position: -200% 0; }
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .blob {
+                width: 200px !important;
+                height: 200px !important;
+            }
+            .blob:nth-child(1) {
+                display: none;
+            }
+            .blob:nth-child(2) {
+                display: none;
+            }
+            .min-h-screen {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+            .page-section {
+                padding-top: 5rem !important;
+                padding-bottom: 3rem !important;
+            }
+            .max-w-6xl, .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .gap-16 {
+                gap: 2rem !important;
+            }
+            .gap-12 {
+                gap: 1.5rem !important;
+            }
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            [class*="md:grid-cols-2"] {
+                grid-template-columns: 1fr !important;
+            }
+            [class*="md:grid-cols-3"] {
+                grid-template-columns: 1fr !important;
+            }
+            [class*="md:gap-16"] {
+                gap: 2rem !important;
+            }
+            [class*="md:flex"] {
+                display: none !important;
+            }
+            [class*="md:flex"].active {
+                display: flex !important;
+            }
+            [class*="md:hidden"] {
+                display: flex !important;
+            }
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+            .text-3xl {
+                font-size: 1.75rem;
+            }
+            .text-4xl {
+                font-size: 2rem;
+            }
+            .text-5xl {
+                font-size: 2rem;
+            }
+            .px-8 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .py-4 {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+            .w-20 {
+                width: 4rem;
+            }
+            .h-20 {
+                height: 4rem;
+            }
+            .w-16 {
+                width: 3rem;
+            }
+            .h-16 {
+                height: 3rem;
+            }
+            .rounded-3xl {
+                border-radius: 1.5rem;
+            }
+            .p-8 {
+                padding: 1.5rem;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
+        /* Responsive Image Styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Responsive Cards */
+        .card-modern, .glass-effect {
+            word-break: break-word;
+            overflow: hidden;
+        }
+        
+        /* Modal Responsive */
+        .modal-content {
+            width: 100% !important;
+            max-width: 90% !important;
+        }
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .job-badge {
+                margin-bottom: 1rem;
+                font-size: 0.7rem;
+                padding: 0.4rem 1rem;
+            }
+            .flex-col {
+                gap: 1rem;
+            }
+            .gap-4 {
+                gap: 0.75rem !important;
+            }
+            .px-6 {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            .pt-20 {
+                padding-top: 5rem;
+            }
+            .pb-20 {
+                padding-bottom: 2rem;
+            }
+            .mt-4 {
+                margin-top: 0.75rem;
+            }
+            .mb-4 {
+                margin-bottom: 0.75rem;
+            }
+            .mb-6 {
+                margin-bottom: 1rem;
+            }
+            .mb-8 {
+                margin-bottom: 1.5rem;
+            }
+            .space-y-8 > * + * {
+                margin-top: 1.5rem;
+            }
+            .space-y-6 > * + * {
+                margin-top: 1rem;
+            }
+            .w-96, .w-80 {
+                width: 100% !important;
+                max-width: 100%;
+            }
+            .h-96 {
+                height: auto !important;
+                aspect-ratio: 1;
+            }
+            .flex-wrap {
+                flex-wrap: wrap;
+            }
+            .flex-col {
+                flex-direction: column;
+            }
+            .whitespace-nowrap {
+                white-space: wrap;
+            }
+            .text-lg {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .max-w-7xl {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            .gap-16 {
+                gap: 2.5rem !important;
+            }
+            .text-3xl {
+                font-size: 2rem;
+            }
+            .text-4xl {
+                font-size: 2.25rem;
+            }
+            [class*="md:grid-cols-2"] {
+                grid-template-columns: 1fr !important;
+            }
+            [class*="md:grid-cols-3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        /* Tablet Responsive Adjustments */
+        @media (min-width: 640px) and (max-width: 1024px) {
+            .max-w-6xl, .max-w-7xl {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+        }
+        
+        /* Landscape Mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .min-h-screen {
+                min-height: auto;
+            }
+            nav {
+                padding: 0.75rem 1.5rem;
+            }
+            .page-section {
+                padding-top: 4rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
+        
+        /* Footer Responsive */
+        @media (max-width: 768px) {
+            footer {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            [class*="md:flex-row"] {
+                flex-direction: column !important;
+            }
+        }
+        
+        /* Form Elements Responsive */
+        @media (max-width: 768px) {
+            input, textarea, button {
+                font-size: 16px;
+            }
+        }
+        
+        /* Mobile Navigation Styles */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            .mobile-menu-btn {
+                display: block !important;
+            }
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 15, 30, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column !important;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+                border-top: 1px solid rgba(0, 212, 255, 0.2);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                z-index: 40;
+            }
+            .nav-menu.active {
+                max-height: 400px;
+                overflow-y: auto;
+            }
+            .nav-menu.active .nav-link {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            }
+            .nav-menu.active .nav-link:last-child {
+                border-bottom: none;
+            }
         }
     </style>
 </head>
@@ -409,22 +721,20 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-effect shadow-lg" style="border-bottom: 1px solid rgba(13, 159, 255, 0.2);">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
             <a href="#" class="text-2xl font-bold" onclick="navigateTo('home'); return false;">
                 <span class="gradient-text">Portfolio</span><span class="text-cyan-400">.</span>
             </a>
-            <div class="hidden md:flex gap-8">
+            <div class="nav-menu hidden md:flex gap-8">
                 <a href="#" class="nav-link active text-gray-300 hover:text-cyan-400 transition font-medium" data-page="home">Home</a>
                 <a href="#" class="nav-link text-gray-300 hover:text-cyan-400 transition font-medium" data-page="about">About</a>
                 <a href="#" class="nav-link text-gray-300 hover:text-cyan-400 transition font-medium" data-page="experience">Experience</a>
                 <a href="#" class="nav-link text-gray-300 hover:text-cyan-400 transition font-medium" data-page="projects">Projects</a>
                 <a href="#" class="nav-link text-gray-300 hover:text-cyan-400 transition font-medium" data-page="contact">Contact</a>
             </div>
-            <div class="md:hidden">
-                <button class="mobile-menu-btn text-gray-300 text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+            <button class="md:hidden mobile-menu-btn text-gray-300 text-2xl" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -731,6 +1041,10 @@
                             <i class="fas fa-arrow-right text-cyan-400 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Built strong foundational expertise in POS workflows and digital ordering platforms</span>
                         </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyan-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Managed Night Team As a Night Head</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -810,23 +1124,6 @@
                             <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Support</span>
                             <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Sales</span>
                             <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Success</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="glass-effect rounded-2xl overflow-hidden hover-lift group">
-                    <div class="h-40 bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-white relative overflow-hidden">
-                        <i class="fas fa-users text-5xl"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 group-hover:translate-x-full transition-all duration-1000"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Multi-Outlet Deployments</h3>
-                        <p class="text-gray-400 mb-4">Managed enterprise-grade POS deployments for major retail brands across 60+ outlets.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full font-semibold">Enterprise</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full font-semibold">Deployment</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full font-semibold">Infrastructure</span>
                         </div>
                     </div>
                 </div>
@@ -954,7 +1251,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
-                <p> </p>
+                <p>&copy; </p>
                 <div class="flex gap-6">
                     <a href="#" onclick="navigateTo('home'); return false;" class="hover:text-cyan-400 transition">Home</a>
                     <a href="#" onclick="navigateTo('projects'); return false;" class="hover:text-cyan-400 transition">Projects</a>
@@ -1085,9 +1382,9 @@
                 const page = link.getAttribute('data-page');
                 navigateTo(page);
                 
-                const navMenu = document.querySelector('.hidden.md\\:flex');
-                if (navMenu) {
-                    navMenu.classList.add('hidden');
+                const navMenu = document.querySelector('.nav-menu');
+                if (navMenu && window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
                 }
             });
         });
@@ -1095,9 +1392,9 @@
         // Mobile menu
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => {
-                const navMenu = document.querySelector('.hidden.md\\:flex');
+                const navMenu = document.querySelector('.nav-menu');
                 if (navMenu) {
-                    navMenu.classList.toggle('hidden');
+                    navMenu.classList.toggle('active');
                 }
             });
         }
